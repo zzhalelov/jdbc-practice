@@ -12,4 +12,16 @@ public class Developer {
         this.specialty = specialty;
         this.salary = salary;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getSpecialty() {
+        return specialty;
+    }
+
+    public double getSalary() {
+        return salary;
+    }
 }
