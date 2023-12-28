@@ -1,6 +1,7 @@
 package org.example;
 
 import java.util.List;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -9,7 +10,14 @@ public class Main {
         DeleteDeveloper deleteDeveloper = new DeleteDeveloper();
 
         //add developers
-        addDeveloper.addDeveloper("John", "Mobile", 7000);
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Insert name: ");
+        String name = scanner.nextLine();
+        System.out.println("Insert specialty: ");
+        String specialty = scanner.nextLine();
+        System.out.println("Insert salary: ");
+        double salary = scanner.nextDouble();
+        addDeveloper.addDeveloper(name, specialty, salary);
 
         //print developer's list
         List<Developer> developers = printDeveloper.getAllDevelopers();
